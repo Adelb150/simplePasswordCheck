@@ -7,6 +7,6 @@ file from Daniel Miessler's SecLists repository.
 
 Please download this file and place it in the project folder before running:
 
-##Run password checker with:
+## Run password checker with:
 python password_checker.py 100k-most-used-passwords-NCSC.txt
 
