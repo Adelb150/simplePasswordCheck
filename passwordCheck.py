@@ -2,9 +2,8 @@ import re
 import sys
 import os
 
-# -------------------------------
+
 # Load common passwords into a set
-# -------------------------------
 def load_common_passwords(filepath: str) -> set[str]:
     if not os.path.exists(filepath):
         print(f"[!] Could not find password list at: {filepath}")
@@ -19,9 +18,7 @@ def load_common_passwords(filepath: str) -> set[str]:
     return common
 
 
-# -------------------------------
 # Password strength evaluation
-# -------------------------------
 def password_strength(password: str, common_passwords: set[str]) -> tuple[str, list[str]]:
     feedback = []
     score = 0
@@ -78,9 +75,9 @@ def password_strength(password: str, common_passwords: set[str]) -> tuple[str, l
     return rating, feedback
 
 
-# -------------------------------
-# CLI main loop
-# -------------------------------
+
+# main loop
+
 def main():
     if len(sys.argv) != 2:
         print("Usage: python password_checker.py <path-to-100k-password-file>")
